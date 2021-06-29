@@ -1,0 +1,109 @@
+kgofron@xf10id-ws1:~/xf/MPOD/opi$ /opt/css/css-4.6.4/cs-studio -nosplash -application org.csstudio.opibuilder.converter.edl WienerStatus.edl 
+Jun 29, 2021 11:35:47 AM org.csstudio.diirt.util.Activator start
+INFO: Starting diirt.util
+Jun 29, 2021 11:35:47 AM org.csstudio.diirt.util.RegisterDatasource registerDatasource
+INFO: register Datasource:beast
+Jun 29, 2021 11:35:47 AM org.diirt.util.config.Configuration getFile
+INFO: Loading /nsls2/users/kgofron/.diirt/datasources/datasources.xml
+Found bundle org.diirt.datasource_3.1.8.20200110064517 [232]
+Found bundle org.eclipse.osgi.internal.framework.BundleContextImpl@4e1e5a7f
+Found bundles [Lorg.osgi.framework.Bundle;@c07ed17
+Found bundleentry://98.fwk757332719/META-INF/services/org.diirt.datasource.DataSourceProvider in org.csstudio.archive.diirt.datasource_1.0.1.202001101206 [98]
+Providers [org.csstudio.archive.diirt.datasource.ArchiveDataSourceProvider]
+Provider instance org.csstudio.archive.diirt.datasource.ArchiveDataSourceProvider@32b13f06
+Found bundleentry://234.fwk757332719/META-INF/services/org.diirt.datasource.DataSourceProvider in org.diirt.datasource-file_3.1.8.20200110064517 [234]
+Providers [org.diirt.datasource.file.FileDataSourceProvider]
+Provider instance org.diirt.datasource.file.FileDataSourceProvider@454fe7c4
+Found bundleentry://238.fwk757332719/META-INF/services/org.diirt.datasource.DataSourceProvider in org.diirt.datasource-loc_3.1.8.20200110064517 [238]
+Providers [org.diirt.datasource.loc.LocalDataSourceProvider]
+Provider instance org.diirt.datasource.loc.LocalDataSourceProvider@57918f2f
+Found bundleentry://239.fwk757332719/META-INF/services/org.diirt.datasource.DataSourceProvider in org.diirt.datasource-sim_3.1.8.20200110064517 [239]
+Providers [org.diirt.datasource.sim.SimulationDataSourceProvider]
+Provider instance org.diirt.datasource.sim.SimulationDataSourceProvider@4f15ae82
+Found bundleentry://240.fwk757332719/META-INF/services/org.diirt.datasource.DataSourceProvider in org.diirt.datasource-sys_3.1.8.20200110064517 [240]
+Providers [org.diirt.datasource.sys.SystemDataSourceProvider]
+Provider instance org.diirt.datasource.sys.SystemDataSourceProvider@4e3b9da5
+Found bundleentry://248.fwk757332719/META-INF/services/org.diirt.datasource.DataSourceProvider in org.diirt.support.diirt-ca_3.1.8.20200110064517 [248]
+Providers [org.diirt.support.ca.JCADataSourceProvider]
+Provider instance org.diirt.support.ca.JCADataSourceProvider@446a110
+Found bundleentry://250.fwk757332719/META-INF/services/org.diirt.datasource.DataSourceProvider in org.diirt.support.diirt-pva_3.1.8.20200110064517 [250]
+Providers [org.diirt.support.pva.PVADataSourceProvider]
+Provider instance org.diirt.support.pva.PVADataSourceProvider@7b328a29
+Jun 29, 2021 11:35:47 AM org.csstudio.diirt.util.RegisterDatasource registerDatasource
+INFO: register Datasource:archive
+************************
+** EDL File Converter **
+************************
+
+** Converting WienerStatus.edl into /nsls2/users/kgofron/xf/MPOD/opi/WienerStatus.opi
+Jun 29, 2021 11:35:48 AM org.csstudio.opibuilder.converter.model.EdmException <init>
+SEVERE: SPECIFIC_PARSING_ERROR exception: Error when parsing annotated field.
+null
+org.csstudio.opibuilder.converter.model.EdmException: SPECIFIC_PARSING_ERROR exception: Error when parsing annotated field.
+null
+	at org.csstudio.opibuilder.converter.model.EdmEntity.<init>(EdmEntity.java:169)
+	at org.csstudio.opibuilder.converter.model.EdmDisplay.<init>(EdmDisplay.java:52)
+	at org.csstudio.opibuilder.converter.model.EdmModel.getDisplay(EdmModel.java:89)
+	at org.csstudio.opibuilder.converter.writer.OpiWriter.writeDisplayFile(OpiWriter.java:99)
+	at org.csstudio.opibuilder.converter.ConverterApplication.convert(ConverterApplication.java:167)
+	at org.csstudio.opibuilder.converter.ConverterApplication.checkThenConvert(ConverterApplication.java:159)
+	at org.csstudio.opibuilder.converter.ConverterApplication.start(ConverterApplication.java:111)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:400)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:595)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1501)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1474)
+Caused by: java.lang.NullPointerException
+	at org.csstudio.opibuilder.converter.model.EdmColor.parseStaticColor(EdmColor.java:189)
+	at org.csstudio.opibuilder.converter.model.EdmColor.<init>(EdmColor.java:87)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.csstudio.opibuilder.converter.model.EdmEntity.<init>(EdmEntity.java:140)
+	... 19 more
+
+Unexpected error while converting.
+org.csstudio.opibuilder.converter.model.EdmException: SPECIFIC_PARSING_ERROR exception: Error when parsing annotated field.
+null
+	at org.csstudio.opibuilder.converter.model.EdmEntity.<init>(EdmEntity.java:169)
+	at org.csstudio.opibuilder.converter.model.EdmDisplay.<init>(EdmDisplay.java:52)
+	at org.csstudio.opibuilder.converter.model.EdmModel.getDisplay(EdmModel.java:89)
+	at org.csstudio.opibuilder.converter.writer.OpiWriter.writeDisplayFile(OpiWriter.java:99)
+	at org.csstudio.opibuilder.converter.ConverterApplication.convert(ConverterApplication.java:167)
+	at org.csstudio.opibuilder.converter.ConverterApplication.checkThenConvert(ConverterApplication.java:159)
+	at org.csstudio.opibuilder.converter.ConverterApplication.start(ConverterApplication.java:111)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:400)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:595)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1501)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1474)
+Caused by: java.lang.NullPointerException
+	at org.csstudio.opibuilder.converter.model.EdmColor.parseStaticColor(EdmColor.java:189)
+	at org.csstudio.opibuilder.converter.model.EdmColor.<init>(EdmColor.java:87)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.csstudio.opibuilder.converter.model.EdmEntity.<init>(EdmEntity.java:140)
+	... 19 more
+Jun 29, 2021 11:35:48 AM org.csstudio.diirt.util.RegisterDatasource deregisterDatasource
+INFO: deregister Datasource:beast
+Jun 29, 2021 11:35:48 AM org.csstudio.diirt.util.RegisterDatasource deregisterDatasource
+INFO: deregister Datasource:archive
